@@ -1,0 +1,545 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+// the colors of web site
+
+// ### Primary
+
+$Bright-Red: hsl(12, 88%, 59%);
+$Dark-Blue: hsl(228, 39%, 23%);
+
+// ### Neutral
+
+$Dark-Grayish-Blue: hsl(227, 12%, 61%);
+$Very-Dark-Blue: hsl(233, 12%, 13%);
+$Very-Pale-Red: hsl(13, 100%, 96%);
+$Vary-Light-Gray: hsl(0, 0%, 98%);
+
+body {
+  font-size: 16px;
+  background-color: var($Vary-Light-Gray);
+  min-height: 100vh;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+// .design-1 {
+//   width: 80%;
+//   min-width: 1000px;
+//   height: 350px;
+//   position: absolute;
+//   top: -100px;
+//   right: 0px;
+
+//   background-color: hsla(12, 88%, 59%, 0.1);
+//   border-radius: 200px;
+//   transform: rotate(-40deg);
+//   z-index: -1;
+// }
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 0.9rem;
+  color: $Dark-Grayish-Blue;
+  line-height: 1.4rem;
+}
+svg {
+  display: flex;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $Very-Dark-Blue;
+}
+
+h1 {
+  font-size: 2.8rem;
+  line-height: 3rem;
+}
+h2 {
+  font-size: 2.1rem;
+  line-height: 2.2rem;
+}
+h3 {
+  font-size: 1.9rem;
+  line-height: 1.9rem;
+}
+
+button {
+  outline: none;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  background-color: $Bright-Red;
+  border-radius: 25px;
+  color: $Vary-Light-Gray;
+  font-size: 0.7rem;
+  font-weight: 500;
+  box-shadow: 0px 3px 10px 0px hsla(12, 88%, 59%, 0.3);
+  width: max-content;
+  cursor: pointer;
+}
+
+.container {
+  width: 70%;
+  min-width: 930px;
+
+  margin: auto;
+}
+
+.g-btn {
+  &:hover {
+    background-color: hsla(12, 88%, 59%, 0.8);
+  }
+}
+
+.active-input::placeholder {
+  color: $Bright-Red;
+}
+
+main {
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0rem;
+    height: 100px;
+
+    .logo {
+      display: flex;
+      align-items: flex-end;
+      height: 100%;
+      // background-color: red;
+      svg {
+      }
+    }
+    .menu-list {
+      ul {
+        display: flex;
+        gap: 2.5rem;
+        li {
+          a {
+            color: $Dark-Blue;
+            &:hover {
+              color: $Dark-Grayish-Blue;
+            }
+          }
+        }
+      }
+    }
+  }
+  .base-side {
+    display: flex;
+
+    .base-info {
+      width: 50%;
+      margin-top: 4rem;
+      display: flex;
+      flex-direction: column;
+
+      height: fit-content;
+      gap: 2rem;
+
+      h1 {
+        min-width: 398.78px;
+      }
+      p {
+        width: 65%;
+        min-width: 319.02px;
+      }
+    }
+    .base-img {
+      width: 50%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .differents-of-manage {
+    display: flex;
+
+    .general-manage-info {
+      width: 50%;
+
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      h2 {
+      }
+      p {
+        width: 60%;
+        min-width: 319.02px;
+      }
+    }
+    .general-manage-info-items {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-left: auto;
+
+      .manage-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.5rem;
+
+        .manage-item-header {
+          display: flex;
+          gap: 1.5rem;
+          align-items: center;
+          width: 100%;
+          .manage-item-number {
+            background-color: $Bright-Red;
+            border-radius: 20px;
+            padding: 0.3rem 1rem;
+            color: $Vary-Light-Gray;
+            font-size: 0.9rem;
+          }
+          .manage-item-name {
+          }
+        }
+        .manage-item-info {
+          width: 85%;
+          min-width: 406.75px;
+        }
+      }
+    }
+  }
+
+  .user-comment-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    $color_1: #343f4f;
+    .wrapper {
+      display: flex;
+
+      position: relative;
+      width: 100%;
+
+      i {
+        top: 50%;
+        height: 44px;
+        width: 44px;
+        color: aliceblue;
+        cursor: pointer;
+        font-size: 1.15rem;
+        position: absolute;
+        text-align: center;
+        line-height: 44px;
+        background: $Bright-Red;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.1s linear;
+        &:active {
+          transform: translateY(-50%) scale(0.9);
+        }
+        &:hover {
+        }
+        &:first-child {
+          left: 0px;
+          display: none;
+        }
+        &:last-child {
+          right: 0px;
+        }
+      }
+      .carousel {
+        // cursor: pointer;
+        // scroll-behavior: smooth;
+        // background-color: yellow;
+        // display: flex;
+        // justify-content: space-between;
+        // gap: 3rem;
+        // width: 1500px;
+      }
+    }
+    .carousel.dragging {
+      cursor: grab;
+      scroll-behavior: auto;
+      .user-container {
+        pointer-events: none;
+      }
+    }
+    .carousel {
+      display: flex;
+      justify-content: space-between;
+      gap: 3rem;
+      scroll-behavior: smooth;
+      overflow: hidden;
+
+      .user-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        object-fit: cover;
+        user-select: none;
+
+        min-width: 475px;
+
+        img {
+          width: 80px;
+          height: 80px;
+        }
+        .user-info {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .manage-footer {
+    .wrapper-footer-team-banner {
+      background-color: $Bright-Red;
+      .footer-team-banner {
+        padding: 3rem 0rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .banner-slogan {
+          width: 35%;
+          min-width: 372.2px;
+          color: $Vary-Light-Gray;
+        }
+        .banner-btn {
+          background-color: $Vary-Light-Gray;
+          color: $Bright-Red;
+          &:hover {
+            background-color: $Very-Dark-Blue;
+            color: $Vary-Light-Gray;
+          }
+        }
+      }
+    }
+    .wrapper-footer-bottom {
+      background-color: $Very-Dark-Blue;
+      .footer-bottom {
+        display: flex;
+        gap: 3rem;
+        padding: 3rem 0rem;
+        justify-content: space-between;
+        .footer-icons-logo {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 4rem;
+          //   background-color: red;
+          .footer-logo {
+          }
+          .social-icons {
+            display: flex;
+            gap: 0.5rem;
+            .s-icon {
+              cursor: pointer;
+              svg {
+                &:hover path {
+                  fill: $Bright-Red;
+                }
+              }
+            }
+          }
+        }
+        .footer-menu-lists {
+          display: flex;
+          //   background-color: yellow;
+          width: 33%;
+          justify-content: space-between;
+          .footer-menu-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            li a {
+              color: $Dark-Grayish-Blue;
+
+              &:hover {
+                color: $Bright-Red;
+              }
+            }
+          }
+        }
+        .footer-input {
+          display: flex;
+          height: fit-content;
+          gap: 0.7rem;
+          input {
+            border-radius: 20px;
+            outline: none;
+            border: none;
+            padding: 0rem 0.7rem;
+            font-size: 0.7rem;
+            width: 80%;
+            min-width: 180px;
+          }
+          .footer-input-btn {
+            &:hover {
+              background-color: hsla(12, 88%, 65%, 1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    width: 75%;
+    min-width: 730px;
+    margin: auto;
+    text-align: center;
+  }
+  main {
+    .menu {
+      .menu-list {
+        display: none;
+      }
+    }
+    .base-side {
+      flex-direction: column;
+
+      .base-info {
+        order: 2;
+        align-items: center;
+
+        width: 100%;
+        h1,
+        p {
+          width: 100%;
+          min-width: 0;
+        }
+      }
+      .base-img {
+        width: 100%;
+        order: 1;
+      }
+    }
+    .differents-of-manage {
+      flex-direction: column;
+      gap: 2rem;
+
+      .general-manage-info {
+        width: 100%;
+        p {
+          width: 100%;
+          min-width: 0;
+        }
+      }
+      .general-manage-info-items {
+        width: 100%;
+        .manage-item {
+          .manage-item-header {
+            background-color: hsla(12, 88%, 59%, 0.1);
+            .manage-item-name {
+              text-align: left;
+              font-size: 0.9rem;
+            }
+          }
+
+          .manage-item-info {
+            width: 100%;
+            min-width: 0;
+            text-align: left;
+          }
+        }
+      }
+    }
+
+    .carousel {
+      .user-container {
+        min-width: 400px !important;
+      }
+    }
+    .manage-footer {
+      .wrapper-footer-team-banner {
+        .footer-team-banner {
+          flex-direction: column;
+          gap: 2rem;
+          .banner-slogan {
+            width: 100%;
+            min-width: 0;
+          }
+        }
+      }
+      .wrapper-footer-bottom {
+        .footer-bottom {
+          flex-direction: column;
+          .footer-icons-logo {
+            order: 3;
+          }
+          .footer-menu-lists {
+            order: 2;
+            width: 100%;
+            justify-content: space-around;
+          }
+          .footer-input {
+            order: 1;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 780px) {
+  .container {
+    width: 95%;
+    min-width: 300px;
+  }
+}
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 15px;
+  }
+  .container {
+    width: 100%;
+  }
+  h1,
+  h2 {
+    font-size: 2rem;
+  }
+
+  main {
+    .general-manage-info p,
+    .general-manage-info-items .manage-item .manage-item-info,
+    .base-side .base-info,
+    .menu,
+    .footer-input {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+
+    .carousel {
+      .user-container {
+        min-width: 300px !important ;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+}
+@media screen and (max-width: 550px) {
+}
